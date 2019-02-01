@@ -1,5 +1,9 @@
 let allMonsters = []
 let monsterContainer = {}
+const createMonsterButton = document.querySelector('#create-monster-button')
+const createMonsterContainer = document.querySelector('#create-monster-container')
+
+
 document.addEventListener("DOMContentLoaded", function(){
   console.log("Hi Gabbbie not Gabby");
     monsterContainer = document.querySelector('#monster-container')
@@ -14,8 +18,28 @@ document.addEventListener("DOMContentLoaded", function(){
   // displays all monsters function goes here...
 })
 
+createMonsterButton.addEventListener('click', function(event){
+  console.log("button clicked");
+  createMonsterContainer.innerHTML =
+  `<form id = "create-monster-form" action="index.html" method="post">
+    <label for="">Name</label>
+    <input type="text"  value="">
+    <label for="">Age</label>
+    <input type="text"  value="">
+    <label for="">Description</label>
+    <input type="text"  value="">
+  </form>
+  `
+
+})
+
+
 
 }) //end of DOMContentLoaded
+
+
+
+
 
 
 function showMonstersSetLength(monsters) {
